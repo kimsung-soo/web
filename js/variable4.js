@@ -34,3 +34,5 @@ console.log(num1 >= num2 || num1 < 100); // || 하나만 true 여도 true
 console.log(num1 >= num2 && !(num1 > 100)); // 모두 true일 경우에만 true !->반댓값 (not)
 
 
+
+
