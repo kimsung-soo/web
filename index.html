@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    #uservalue {
+    #userValue {
       color: red;
     }
   </style>
@@ -16,16 +16,23 @@
 <body>
   <!-- HTML 주석문. -->
   <div id="show">
-    <input type="text" id="uservalue" value="김민규">
-    <P>
+    성별: <input type="text" id="userValue">
+    <button id="searchBtn" class = "btn btn-primary">조회</button>
+    <select id ="selectGender" class ="form-control">
+      <option value="All">전체</option>
+      <option value="Male">남자</option>
+      <option value="Female">여자</option>
+    </select>
+    <!-- <P>
       <input type="text" id="num1" value="30"> %
       <input type="text" id="num2" value="17"> =
       <input type="text" id="result">
-    </P>
+    </P> -->
   </div>
 
   
-  <script src="js/function3exe.js">
+  <script src="js/jsonData.js"></script>
+  <script src="js/function8.js">
 
   </script>
 
