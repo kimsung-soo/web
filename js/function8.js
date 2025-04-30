@@ -11,6 +11,7 @@ let butTemplate = "<button class='btn btn-danger' onclick='deleteTr(event)'>삭�
 // 속성을 정의 =id , firstname , email
 let fields = ['id', 'first_name', 'gender', 'salary'];
 
+
 //사원목록을(table 형식) 출력.
 let elist = "<table class = 'table'><thead>"
 for (let field of fields) {
@@ -45,7 +46,8 @@ document.querySelector('button#searchBtn') //-> 버튼 테그인데 #serchBtn bt
 //2.select change
 document.querySelector('select#selectGender')
   .addEventListener('change', function () {
-
+    // 입력값
+    console.log(this) //->this 는 이벤트 대상
     let searchValue = document.querySelector('#selectGender').value;
     let list = "";
     for (let emp of data) {
@@ -59,19 +61,16 @@ document.querySelector('select#selectGender')
 
 
   //3.버튼 삭제
-  document.querySelector('button,butTemplate')
-  .addEventListener('removeElement', function () {
+  function deleteTr(button) {
+    console.log(button);
+    button.target.parentElement.parentElement.remove();
+  }
 
-    let searchValue = document.querySelector('#selectGender').value;
-    let list = "";
-    for (let emp of data) {
-      if (searchValue == 'All' || searchValue == emp.gender) {
-        list += makeTr(emp);
-      }
-    }
-    document.querySelector('table.table>tbody').innerHTML = list;
-  });
-
+  //   let tr = Delet.target.closest('tr');  
+  //   if (tr) {
+  //     tr.remove(); 
+  //   }
+  
   
 
 
